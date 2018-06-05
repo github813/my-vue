@@ -12,6 +12,12 @@ import eletable from '../views/test/eletable'
 import mergetable from '../views/test/mergetable'
 import twotable from '../views/test/twotable'
 import expandtable from '../views/test/expandtable'
+import goodstype from '../views/goodstype/goodstype'
+import addresslist from '../views/address/addresslist'
+import map from '../views/address/addmap'
+import basecharts from '../views/highcharts/basecharts'
+import lifecycle from '../views/vue/lifecycle'
+import watch from '../views/vue/watch'
 Vue.use(Router)
 
 const router = new Router({
@@ -36,7 +42,13 @@ const router = new Router({
         {path:'/test/expandtable',component:expandtable},
         {path:'/test/twotable',component:twotable},
         {path: '/myself/info',component: myself},
-        {path:'/vehicle',component: vehicle}
+        {path:'/vehicle',component: vehicle},
+        {path:'/address',component: addresslist},
+        {path:'/address/map/:type/:id',component: map},
+        {path:'/goodstype',component: goodstype},
+        {path:'/highcharts/basecharts',component:basecharts},
+        {path:'/vue/lifecycle',component:lifecycle},
+        {path:'/vue/watch',component:watch}
       ]
     }
 

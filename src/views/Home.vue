@@ -13,10 +13,18 @@
         <i class="el-icon-menu"></i>
         <span slot="title">发货</span>
       </el-menu-item>
+      <el-menu-item index="/goodstype">
+        <i class="el-icon-menu"></i>
+        <span slot="title">品类管理</span>
+      </el-menu-item>
+      <el-menu-item index="/address">
+        <i class="el-icon-menu"></i>
+        <span slot="title">地址管理</span>
+      </el-menu-item>
       <el-submenu index="/">
         <template slot="title">
           <i class="el-icon-location"></i>
-          <span>学习中</span>
+          <span>UI学习中</span>
         </template>
         <el-menu-item-group>
           <template slot="title">表格</template>
@@ -27,7 +35,27 @@
         </el-menu-item-group>
 
       </el-submenu>
+      <el-submenu index="vue">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span>Vue学习中</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="/vue/lifecycle">生命周期</el-menu-item>
+          <el-menu-item index="/vue/watch">watch</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
+      <el-submenu index="2">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span>统计图</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="/highcharts/basecharts">基本图表</el-menu-item>
+          <el-menu-item index="/test/expandtable">147</el-menu-item>
+        </el-menu-item-group>
 
+      </el-submenu>
 
       <el-menu-item index="/" disabled>
         <i class="el-icon-document"></i>

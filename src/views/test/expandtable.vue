@@ -54,7 +54,7 @@
     },
     computed: {
       cardGroupList() {
-        return this.$store.state.supplier.cardGroupList;
+        return this.$store.state.userservice.cardGroupList;
       },
 
     },

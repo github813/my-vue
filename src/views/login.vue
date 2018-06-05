@@ -2,7 +2,7 @@
   <div class="login">
     <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0px" class="demo-ruleForm">
       <el-form-item  prop="name">
-        <el-input v-model="ruleForm.mobile" placeholder="请输入用户名"></el-input>
+        <el-input maxlength="11" v-model="ruleForm.mobile" placeholder="请输入用户名"></el-input>
       </el-form-item>
       <el-form-item  prop="pwd">
         <el-input type="password" v-model="ruleForm.pwd"  placeholder="请输入密码"></el-input>
@@ -29,8 +29,8 @@
     data:()=>({
       ruleForm: {
         captcha:'1',
-        mobile: '18001383888 ',
-        pwd:'123654',
+        mobile: '12222222222',
+        pwd:'123456',
         platform:4,
       },
       rules: {

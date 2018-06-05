@@ -61,7 +61,7 @@
                     <span>{{ card.name }}</span>
                   </el-form-item>
                   <el-form-item label="消费卡类别：">
-                    <span>{{ card.type }}</span>
+                    <span>{{ card.type|code2player }}</span>
                   </el-form-item>
                   <el-form-item label="发放概率：">
                     <span>{{ card.rate }}</span>
@@ -112,7 +112,7 @@
                   <span>{{ card.name }}</span>
                 </el-form-item>
                 <el-form-item label="消费卡类别：">
-                  <span>{{ card.type }}</span>
+                  <span>{{ card.type|code2player('industry')}}</span>
                 </el-form-item>
                 <el-form-item label="发放概率：">
                   <span>{{ card.rate }}</span>
@@ -178,17 +178,20 @@
         },
         computed: {
           supplierlist() {
-            return this.$store.state.supplier.supplierlist;
+            return this.$store.state.userservice.supplierlist;
           },
           goodstypelist(){
-            return this.$store.state.supplier.goodstypelist;
+            return this.$store.state.userservice.goodstypelist;
           },
           brokerList(){
-            return this.$store.state.supplier.brokerlist;
+            return this.$store.state.userservice.brokerlist;
           },
           cardGroupList() {
-            return this.$store.state.supplier.cardGroupList;
+            return this.$store.state.userservice.cardGroupList;
           },
+        },
+        filters:{
+
         },
         methods: {
           onSubmit() {
