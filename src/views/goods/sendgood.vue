@@ -141,6 +141,7 @@
 </template>
 
 <script>
+  import { mapGetters,mapState  } from 'vuex'
     export default {
         name: "sendgood",
         data() {
@@ -177,18 +178,34 @@
           this.$store.dispatch({ type: 'getVipCardGroupListByVipId'})
         },
         computed: {
-          supplierlist() {
-            return this.$store.state.userservice.supplierlist;
-          },
-          goodstypelist(){
-            return this.$store.state.userservice.goodstypelist;
-          },
-          brokerList(){
-            return this.$store.state.userservice.brokerlist;
-          },
-          cardGroupList() {
-            return this.$store.state.userservice.cardGroupList;
-          },
+          // supplierlist() {
+          //   return this.$store.state.userservice.supplierlist;
+          // },
+          // goodstypelist(){
+          //   return this.$store.state.userservice.goodstypelist;
+          // },
+          // brokerList(){
+          //   return this.$store.state.userservice.brokerlist;
+          // },
+          // cardGroupList() {
+          //   return this.$store.state.userservice.cardGroupList;
+          // },
+          // mapState
+          ...mapState({
+            supplierlist: state => state.userservice.supplierlist,
+            goodstypelist: state => state.userservice.goodstypelist,
+            brokerList: state => state.userservice.brokerList,
+            cardGroupList: state => state.userservice.cardGroupList
+          }),
+          //mapGetters  stroe中定义getter
+          ...mapGetters([
+            'supplierlist',
+            'goodstypelist',
+            'brokerlist',
+            'cardGroupList'
+          ])
+
+
         },
         filters:{
 

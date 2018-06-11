@@ -105,6 +105,9 @@
           getlist(){
             let comment ={page:this.page.pageNum,pageSize:1000,type:this.activeName} ;
             this.$store.dispatch({ type: 'getAddresslist',comment})
+            //   ...mapActions(['getAddresslist'])
+
+
           },
           gomap(){
             sessionStorage.setItem('addretype',this.activeName)
